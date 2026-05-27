@@ -1,93 +1,40 @@
 # Kamilovs' Clinic — Strategy Presentation
 
-Premium executive presentation website for **Kamilovs' Clinic** — a management strategy deck for clinic leadership covering operations, marketing, IT, finance, and growth.
+Статический premium-сайт презентации стратегии развития клиники. Работает без сборки — только HTML, CSS и JavaScript.
 
-## Overview
+**Live:** [https://samandar90.github.io/manager_presentation/](https://samandar90.github.io/manager_presentation/)
 
-Single-page presentation with smooth scroll, section navigation, and a clean minimal aesthetic (Apple / Linear / Notion style). All content is data-driven and in Russian.
+## Структура
 
-## Tech Stack
+```
+index.html      — разметка всех секций
+style.css       — стили и анимации
+script.js       — навигация, scroll, reveal, фильтры
+assets/
+  icons/        — favicon
+  images/       — OG preview
+```
 
-- **React 19** + **TypeScript**
-- **Vite** — build tool
-- **Tailwind CSS v4** — styling
-- **Framer Motion** — subtle scroll & UI animations
-- **Lenis** — smooth scrolling
-- **Lucide React** — icons
-- **shadcn-style UI** — Button (CVA + Radix Slot)
+## Локальный просмотр
 
-## Requirements
-
-- Node.js **20+**
-- npm **10+**
-
-## Install
+Откройте `index.html` в браузере или используйте простой сервер:
 
 ```bash
-git clone https://github.com/Samandar90/manager_presentation.git
-cd manager_presentation
-npm install
+# Python
+python -m http.server 8080
 ```
 
-## Run Locally
+## GitHub Pages
 
-```bash
-npm run dev
-```
+1. Репозиторий: [Samandar90/manager_presentation](https://github.com/Samandar90/manager_presentation)
+2. **Settings → Pages** → Source: ветка **`gh-pages`**, папка **`/ (root)`**
+3. Загрузите файлы в ветку `gh-pages` (через Git или push)
 
-Open [http://localhost:5173/manager_presentation/](http://localhost:5173/manager_presentation/) (base path matches production).
+Файлы в корне ветки `gh-pages` должны содержать: `index.html`, `style.css`, `script.js`, `assets/`, `.nojekyll`.
 
-## Build
+## Секции
 
-```bash
-npm run build
-npm run preview
-```
-
-Production output: `dist/`
-
-## Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Development server |
-| `npm run build` | Production build + `404.html` for GitHub Pages |
-| `npm run preview` | Preview build at `/manager_presentation/` |
-| `npm run deploy` | Build and publish to `gh-pages` branch |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | TypeScript check |
-
-## Project Structure
-
-```
-src/
-  components/
-    layout/       # Navbar, Footer, Section, PageBackground
-    sections/     # Page sections (Hero, IT, Finance, …)
-    ui/           # Reusable UI primitives
-  data/           # Presentation content (JSON-like TS modules)
-  hooks/          # Lenis, scroll progress, active section
-  constants/      # Motion variants
-  App.tsx
-  main.tsx
-public/           # favicon, OG preview image
-```
-
-## Deploy on GitHub Pages
-
-**Live URL:** [https://samandar90.github.io/manager_presentation/](https://samandar90.github.io/manager_presentation/)
-
-1. Install dependencies: `npm install`
-2. Deploy: `npm run deploy`
-3. In GitHub → **Settings → Pages** → Source: branch **`gh-pages`**, folder **`/ (root)`**
-
-The project uses `base: '/manager_presentation/'` in `vite.config.ts`. Navigation uses in-page anchors (`#overview`, `#it`, …), not React Router — no extra routing setup required.
-
-### Local preview (production paths)
-
-```bash
-npm run preview
-```
+Hero · Обзор · Команда · Отделы · Реклама · Блогеры · Операции · Финансы · 30 дней · IT · Открытие · Итог
 
 ## License
 

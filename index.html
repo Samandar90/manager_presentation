@@ -2,51 +2,550 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Презентация стратегии развития Kamilovs' Clinic."
+      content="Презентация стратегии развития Kamilovs' Clinic — управление, маркетинг, IT и рост клиники."
     />
     <meta name="theme-color" content="#f5f3ef" />
     <title>Kamilovs' Clinic — Strategy Presentation</title>
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-    <meta
-      property="og:title"
-      content="Kamilovs' Clinic — Strategy Presentation"
-    />
+    <meta property="og:title" content="Kamilovs' Clinic — Strategy Presentation" />
     <meta
       property="og:description"
       content="Презентация стратегии развития Kamilovs' Clinic."
     />
-    <meta property="og:image" content="https://samandar90.github.io/manager_presentation/og-preview.svg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
     <meta
-      name="twitter:title"
-      content="Kamilovs' Clinic — Strategy Presentation"
+      property="og:image"
+      content="https://samandar90.github.io/manager_presentation/assets/images/og-preview.svg"
     />
-    <meta
-      name="twitter:description"
-      content="Презентация стратегии развития Kamilovs' Clinic."
-    />
-    <meta name="twitter:image" content="https://samandar90.github.io/manager_presentation/og-preview.svg" />
 
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="#hero" class="navbar__brand">
+          <span class="navbar__brand-mark">K</span>
+          <span class="navbar__brand-text">Kamilovs' Clinic</span>
+        </a>
+        <nav class="navbar__nav" id="nav-menu" aria-label="Основная навигация">
+          <a href="#overview" class="nav-link" data-section="overview">Обзор</a>
+          <a href="#team" class="nav-link" data-section="team">Команда</a>
+          <a href="#advertising" class="nav-link" data-section="advertising">Реклама</a>
+          <a href="#bloggers" class="nav-link" data-section="bloggers">Блогеры</a>
+          <a href="#internal" class="nav-link" data-section="internal">Операции</a>
+          <a href="#finance" class="nav-link" data-section="finance">Финансы</a>
+          <a href="#first-steps" class="nav-link" data-section="first-steps">30 дней</a>
+          <a href="#it" class="nav-link" data-section="it">IT</a>
+          <a href="#opening" class="nav-link" data-section="opening">Открытие</a>
+        </nav>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Progress rail -->
+    <aside class="progress-rail" id="progress-rail" aria-label="Прогресс по разделам">
+      <div class="progress-rail__track">
+        <div class="progress-rail__fill" id="progress-fill"></div>
+      </div>
+      <nav class="progress-rail__dots">
+        <a href="#overview" class="progress-dot" data-section="overview" title="Обзор"><span>01</span></a>
+        <a href="#team" class="progress-dot" data-section="team" title="Команда"><span>02</span></a>
+        <a href="#advertising" class="progress-dot" data-section="advertising" title="Реклама"><span>04</span></a>
+        <a href="#bloggers" class="progress-dot" data-section="bloggers" title="Блогеры"><span>05</span></a>
+        <a href="#internal" class="progress-dot" data-section="internal" title="Операции"><span>06</span></a>
+        <a href="#finance" class="progress-dot" data-section="finance" title="Финансы"><span>07</span></a>
+        <a href="#first-steps" class="progress-dot" data-section="first-steps" title="30 дней"><span>08</span></a>
+        <a href="#it" class="progress-dot" data-section="it" title="IT"><span>09</span></a>
+        <a href="#opening" class="progress-dot" data-section="opening" title="Открытие"><span>10</span></a>
+        <a href="#final" class="progress-dot" data-section="final" title="Итог"><span>11</span></a>
+      </nav>
+    </aside>
+
+    <main>
+      <!-- HERO -->
+      <section class="section hero" id="hero">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">Management Presentation / 2026</p>
+            <h1 class="hero__title">Стратегия развития Kamilovs' Clinic</h1>
+            <p class="hero__subtitle">
+              План системного управления, маркетинга, сервиса, IT-автоматизации и роста клиники после
+              вступления в должность менеджера.
+            </p>
+            <div class="hero__actions">
+              <a href="#overview" class="btn btn--primary">Смотреть план</a>
+              <a href="#it" class="btn btn--ghost">IT и автоматизация</a>
+            </div>
+            <ul class="hero__tags">
+              <li>Маркетинг</li>
+              <li>Сервис</li>
+              <li>CRM</li>
+              <li>Контроль качества</li>
+              <li>Рост клиники</li>
+            </ul>
+          </div>
+          <div class="hero__preview reveal reveal--delay">
+            <div class="exec-card exec-card--main">
+              <span class="exec-card__label">Executive Overview</span>
+              <strong class="exec-card__value">+24%</strong>
+              <span class="exec-card__hint">Рост эффективности процессов</span>
+            </div>
+            <div class="exec-card">
+              <span class="exec-card__label">CRM</span>
+              <strong class="exec-card__value">Live</strong>
+              <span class="exec-card__hint">Контроль статистики</span>
+            </div>
+            <div class="exec-card">
+              <span class="exec-card__label">Маркетинг</span>
+              <strong class="exec-card__value">5</strong>
+              <span class="exec-card__hint">Ключевых ролей в команде</span>
+            </div>
+            <div class="exec-card exec-card--wide">
+              <span class="exec-card__label">Стратегия 2026</span>
+              <p>Система, где каждый процесс измерим и управляем.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="section" id="overview">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">01</span>
+            <p class="eyebrow">Обзор</p>
+            <h2>Стратегический фокус</h2>
+          </header>
+
+          <div class="goal-block reveal">
+            <h3>Главная цель</h3>
+            <p>
+              Создать управляемую систему, где каждый отдел, сотрудник, рекламный канал и пациентский путь
+              находятся под контролем, измеряются через CRM и работают на рост доверия, качества сервиса и
+              прибыли клиники.
+            </p>
+          </div>
+
+          <div class="story-rail reveal">
+            <article class="story-step">
+              <span class="story-step__label">Проблема</span>
+              <h4>Хаос процессов</h4>
+              <p>Нет единой системы контроля и прозрачной аналитики.</p>
+            </article>
+            <article class="story-step">
+              <span class="story-step__label">Решение</span>
+              <h4>Менеджмент + CRM</h4>
+              <p>Централизованное управление всеми направлениями клиники.</p>
+            </article>
+            <article class="story-step">
+              <span class="story-step__label">Система</span>
+              <h4>Операционная модель</h4>
+              <p>Стандарты, команда, IT и маркетинг в одной структуре.</p>
+            </article>
+            <article class="story-step">
+              <span class="story-step__label">Результат</span>
+              <h4>Рост и прибыль</h4>
+              <p>Измеримый сервис, доверие пациентов и цифры для руководства.</p>
+            </article>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card reveal">
+              <div class="kpi-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></svg>
+              </div>
+              <h3>Сервис</h3>
+              <p>Единые стандарты общения, контроль качества и пациентский опыт на каждом этапе.</p>
+            </article>
+            <article class="kpi-card reveal">
+              <div class="kpi-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+              </div>
+              <h3>Системность</h3>
+              <p>Прозрачные процессы, отчётность и управляемая операционная модель клиники.</p>
+            </article>
+            <article class="kpi-card reveal">
+              <div class="kpi-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11v2a2 2 0 0 0 2 2h1l4 4V5L6 9H5a2 2 0 0 0-2 2z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a9 9 0 0 1 0 14.14"/></svg>
+              </div>
+              <h3>Маркетинг</h3>
+              <p>Команда, каналы и измеримый рост узнаваемости и потока пациентов.</p>
+            </article>
+            <article class="kpi-card reveal">
+              <div class="kpi-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+              </div>
+              <h3>Автоматизация</h3>
+              <p>CRM, IT-инструменты и цифровая инфраструктура для контроля и аналитики.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="section section--alt" id="team">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">02</span>
+            <p class="eyebrow">Команда</p>
+            <h2>Маркетинг-команда</h2>
+          </header>
+          <div class="cards-grid cards-grid--3">
+            <article class="team-card reveal">
+              <span class="tag">Маркетинг</span>
+              <h3>SMM специалист</h3>
+              <p>Контент, соцсети, вовлечение аудитории и регулярная коммуникация с пациентами.</p>
+            </article>
+            <article class="team-card reveal">
+              <span class="tag">Маркетинг</span>
+              <h3>Графический дизайнер</h3>
+              <p>Визуальная айдентика, печатные материалы, постеры и премиальный визуал клиники.</p>
+            </article>
+            <article class="team-card reveal">
+              <span class="tag">Проектно</span>
+              <h3>Motion дизайнер</h3>
+              <p>Анимация и видеоконтент для разовых кампаний, рекламы и презентаций.</p>
+            </article>
+            <article class="team-card reveal">
+              <span class="tag">Маркетинг</span>
+              <h3>Brand Face</h3>
+              <p>Лицо бренда клиники в контенте, stories и публичных коммуникациях.</p>
+            </article>
+            <article class="team-card team-card--highlight reveal">
+              <span class="tag tag--bronze">IT</span>
+              <h3>IT-специалист</h3>
+              <p>Реализация цифровых решений: CRM, автоматизация, сайт и внутренние системы.</p>
+              <a href="#it" class="card-link">Смотреть IT-направление →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEPARTMENTS -->
+      <section class="section" id="departments">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">03</span>
+            <p class="eyebrow">Структура</p>
+            <h2>Отделы</h2>
+          </header>
+          <div class="cards-grid cards-grid--2">
+            <article class="dept-card reveal">
+              <h3>HR отдел</h3>
+              <dl>
+                <div><dt>Набор врачей</dt><dd>Хайдар Позилович</dd></div>
+                <div><dt>Набор остальных сотрудников</dt><dd>Менеджер</dd></div>
+              </dl>
+            </article>
+            <article class="dept-card reveal">
+              <h3>Отдел контроля качества</h3>
+              <dl>
+                <div><dt>Ответственный</dt><dd>Менеджер</dd></div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADVERTISING -->
+      <section class="section section--alt" id="advertising">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">04</span>
+            <p class="eyebrow">Рост</p>
+            <h2>Реклама и рост</h2>
+          </header>
+          <div class="filter-bar reveal" role="tablist" aria-label="Фильтр рекламы">
+            <button class="filter-btn is-active" data-filter="all" type="button">Все</button>
+            <button class="filter-btn" data-filter="online" type="button">Онлайн</button>
+            <button class="filter-btn" data-filter="offline" type="button">Офлайн</button>
+            <button class="filter-btn" data-filter="loyalty" type="button">Лояльность</button>
+            <button class="filter-btn" data-filter="reviews" type="button">Отзывы</button>
+          </div>
+          <div class="ad-grid" id="ad-grid">
+            <article class="ad-card reveal" data-category="online">Бюджет на таргетированную рекламу</article>
+            <article class="ad-card reveal" data-category="offline">Билборды</article>
+            <article class="ad-card reveal" data-category="offline">Раздача листовок</article>
+            <article class="ad-card reveal" data-category="offline">LED экран</article>
+            <article class="ad-card reveal" data-category="offline">Вывески на улицах</article>
+            <article class="ad-card reveal" data-category="reviews">Скидка за отзыв в Instagram с отметкой клиники</article>
+            <article class="ad-card reveal" data-category="reviews">Фидбек от каждого пациента</article>
+            <article class="ad-card reveal" data-category="reviews">Работа над отзывами</article>
+            <article class="ad-card reveal" data-category="online">Видео с бонусом 1+1</article>
+            <article class="ad-card reveal" data-category="loyalty">Пакеты услуг / чек-апы</article>
+            <article class="ad-card reveal" data-category="loyalty">Бонусные талоны</article>
+            <article class="ad-card reveal" data-category="online">Привлечение блогеров</article>
+            <article class="ad-card reveal" data-category="loyalty">Уникальные предложения пациентам</article>
+            <article class="ad-card reveal" data-category="loyalty">Подарочные сертификаты</article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOGGERS -->
+      <section class="section" id="bloggers">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">05</span>
+            <p class="eyebrow">Аналитика</p>
+            <h2>Блогеры и рекламные интеграции</h2>
+            <p class="section-lead">
+              Система анализа рекламных размещений, бюджета, охватов и эффективности продвижения клиники.
+            </p>
+          </header>
+
+          <div class="badges-row reveal">
+            <span class="badge-stat"><strong>12+</strong> Блогеры</span>
+            <span class="badge-stat"><strong>Контроль</strong> Бюджет</span>
+            <span class="badge-stat"><strong>Live</strong> Охваты</span>
+            <span class="badge-stat"><strong>Записи</strong> Прогноз</span>
+          </div>
+
+          <div class="cards-grid cards-grid--4 reveal">
+            <article class="pillar-card"><h4>Цель</h4><p>Выбрать блогеров с максимальной конверсией в запись и минимальной стоимостью лида.</p></article>
+            <article class="pillar-card"><h4>Данные</h4><p>Стоимость, охваты, аудитория, прогноз записей и комментарии по каждой интеграции.</p></article>
+            <article class="pillar-card"><h4>Контроль</h4><p>Единая таблица для сравнения каналов, бюджетов и фактической отдачи рекламы.</p></article>
+            <article class="pillar-card"><h4>ROI</h4><p>Прозрачный расчёт окупаемости каждого размещения и рекламного решения.</p></article>
+          </div>
+
+          <div class="sheet-preview reveal">
+            <div class="sheet-preview__header">
+              <div>
+                <h3>Аналитика блогеров — Kamilovs' Clinic</h3>
+                <p class="sheet-meta"><span class="status-dot"></span> Активна · обновлено 27 мая 2026</p>
+              </div>
+              <div class="sheet-actions">
+                <a href="https://docs.google.com/spreadsheets/d/1OLtIzsymgei5O68nnQjlEP6rMEnCoLs_f_27PAyU1fo/edit?gid=0#gid=0" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Открыть таблицу</a>
+                <a href="https://docs.google.com/spreadsheets/d/1OLtIzsymgei5O68nnQjlEP6rMEnCoLs_f_27PAyU1fo/export?format=pdf" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Скачать PDF</a>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Блогеры</th>
+                    <th>Стоимость</th>
+                    <th>Аудитория</th>
+                    <th>Охваты</th>
+                    <th>Прогноз записей</th>
+                    <th>Комментарии</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>@blogger_1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>@blogger_2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td colspan="6" class="table-note">Полные данные — в Google Sheets</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="sheet-footer">Данные помогают выбирать наиболее эффективных блогеров и контролировать окупаемость рекламы.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERNAL -->
+      <section class="section section--alt" id="internal">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">06</span>
+            <p class="eyebrow">Операции</p>
+            <h2>Операционная система клиники</h2>
+          </header>
+
+          <div class="timeline reveal">
+            <article class="timeline-phase"><span>01</span><h4>Фундамент операций</h4><p>Ежедневный контроль, графики, санитарные нормы и выполнение планов.</p></article>
+            <article class="timeline-phase"><span>02</span><h4>Стандарты сервиса</h4><p>Единые правила общения, обучение персонала и контроль качества.</p></article>
+            <article class="timeline-phase"><span>03</span><h4>Системы и CRM</h4><p>Цифровой контроль, отчётность, задачи и инфраструктура клиники.</p></article>
+            <article class="timeline-phase"><span>04</span><h4>Рост и удержание</h4><p>Лояльность, call center, рефералы и аналитика отказов.</p></article>
+          </div>
+
+          <div class="process-grid" id="process-grid">
+            <!-- populated by minimal inline list for key items -->
+          </div>
+        </div>
+      </section>
+
+      <!-- FINANCE -->
+      <section class="section" id="finance">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">07</span>
+            <p class="eyebrow">Финансы</p>
+            <h2>Финансовая сторона</h2>
+            <p class="section-lead">Планирование, контроль и прозрачная отчётность по всем направлениям расходов.</p>
+          </header>
+
+          <div class="flow-steps reveal">
+            <span>Бюджет</span><span class="flow-arrow">→</span>
+            <span>Контроль</span><span class="flow-arrow">→</span>
+            <span>Отчетность</span><span class="flow-arrow">→</span>
+            <span>Результат</span>
+          </div>
+
+          <div class="cards-grid cards-grid--3">
+            <article class="finance-card reveal">
+              <h3>Зарплаты маркетинг-команды</h3>
+              <p>Фиксированный фонд оплаты SMM, дизайнеров, Brand Face и IT-специалиста.</p>
+            </article>
+            <article class="finance-card reveal">
+              <h3>Рекламные бюджеты</h3>
+              <p>Таргет, офлайн-каналы, блогеры и промо-кампании с ежемесячным лимитом.</p>
+            </article>
+            <article class="finance-card reveal">
+              <h3>Бюджет на хозяйственные вещи</h3>
+              <p>Материалы, оборудование, парковка, бейджики и операционные нужды клиники.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FIRST 30 DAYS -->
+      <section class="section section--alt" id="first-steps">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">08</span>
+            <p class="eyebrow">Старт</p>
+            <h2>Первые 30 дней</h2>
+            <p class="section-lead">Первые действия после вступления в должность менеджера клиники.</p>
+          </header>
+
+          <div class="week-grid" id="week-grid"></div>
+        </div>
+      </section>
+
+      <!-- IT -->
+      <section class="section section--it" id="it">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">09</span>
+            <p class="eyebrow">IT Направление</p>
+            <h2>Что предстоит сделать IT-специалисту</h2>
+            <p class="section-lead">
+              Создание цифровой системы для автоматизации процессов, контроля качества, аналитики и
+              улучшения работы клиники.
+            </p>
+          </header>
+
+          <div class="it-intro reveal">
+            <p>
+              IT-направление должно стать не просто технической частью клиники, а полноценной системой
+              управления, которая ускоряет процессы, улучшает сервис и помогает руководству видеть реальные
+              показатели работы.
+            </p>
+            <ul class="it-bullets">
+              <li>Автоматизация процессов</li>
+              <li>Контроль статистики</li>
+              <li>Улучшение качества сервиса</li>
+            </ul>
+          </div>
+
+          <div class="it-grid">
+            <article class="it-card reveal">
+              <div class="it-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
+              </div>
+              <h3>Система распределения задач</h3>
+              <p>Внутренняя система управления задачами для сотрудников и отделов клиники с приоритетами, ответственными и контролем выполнения.</p>
+              <div class="tag-row"><span>Приоритеты</span><span>Контроль</span><span>Сотрудники</span></div>
+            </article>
+            <article class="it-card reveal">
+              <div class="it-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2M15 3v2M6 8h12M8 21h8a2 2 0 0 0 2-2V8H6v11a2 2 0 0 0 2 2z"/></svg>
+              </div>
+              <h3>CRM лаборатории</h3>
+              <p>Именная CRM-система для лаборатории, которая будет автоматически считать анализы пациентов, хранить историю исследований и автоматизировать работу лаборатории.</p>
+              <div class="tag-row"><span>Анализы</span><span>Автоматизация</span><span>История пациентов</span></div>
+            </article>
+            <article class="it-card reveal">
+              <div class="it-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="8" width="14" height="10" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><circle cx="12" cy="13" r="1.5"/></svg>
+              </div>
+              <h3>AI для медицинских документов</h3>
+              <p>AI-инструмент для проверки медицинских терминов, документов и справок перед выдачей пациентам.</p>
+              <div class="tag-row"><span>Проверка терминов</span><span>Документы</span><span>Контроль качества</span></div>
+            </article>
+            <article class="it-card reveal">
+              <div class="it-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+              </div>
+              <h3>Новый сайт клиники</h3>
+              <p>Улучшение или создание нового современного сайта клиники для доверия пациентов, онлайн-записи и продвижения услуг.</p>
+              <div class="tag-row"><span>Онлайн-запись</span><span>SEO</span><span>Маркетинг</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPENING -->
+      <section class="section section--alt" id="opening">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">10</span>
+            <p class="eyebrow">Финал</p>
+            <h2>Официальное открытие клиники</h2>
+          </header>
+          <p class="opening-lead reveal">
+            После системной подготовки, настройки процессов, команды, маркетинга, CRM и сервиса клиника будет
+            готова к сильному официальному открытию.
+          </p>
+          <ul class="opening-list reveal">
+            <li>Подготовка команды</li>
+            <li>Подготовка визуала</li>
+            <li>Реклама открытия</li>
+            <li>Контент для Instagram</li>
+            <li>Блогеры</li>
+            <li>Спецпредложения</li>
+            <li>Контроль качества первого потока пациентов</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FINAL -->
+      <section class="section section--final" id="final">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-num">11</span>
+            <p class="eyebrow">Итог</p>
+            <h2>Моя задача как менеджера</h2>
+          </header>
+          <blockquote class="final-quote reveal">
+            Не просто контролировать клинику, а построить систему, где каждый процесс понятен, каждый
+            сотрудник знает свою задачу, каждый пациент получает качественный сервис, а руководство видит
+            реальные цифры и результат.
+          </blockquote>
+          <a href="#hero" class="btn btn--primary reveal">Перейти к началу</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="footer__mark">K</span>
+          <div>
+            <strong>Management Strategy Presentation</strong>
+            <span>Kamilovs' Clinic · 2026</span>
+          </div>
+        </div>
+        <p class="footer__note">Prepared for clinic leadership</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
