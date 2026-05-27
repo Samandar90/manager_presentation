@@ -24,8 +24,8 @@ Single-page presentation with smooth scroll, section navigation, and a clean min
 ## Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/kamilovs-clinic-strategy-presentation.git
-cd kamilovs-clinic-strategy-presentation
+git clone https://github.com/Samandar90/manager_presentation.git
+cd manager_presentation
 npm install
 ```
 
@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173/manager_presentation/](http://localhost:5173/manager_presentation/) (base path matches production).
 
 ## Build
 
@@ -48,13 +48,14 @@ Production output: `dist/`
 
 ## Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `npm run dev`  | Development server       |
-| `npm run build`| Production build         |
-| `npm run preview` | Preview production build |
-| `npm run lint` | ESLint                   |
-| `npm run typecheck` | TypeScript check      |
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Development server |
+| `npm run build` | Production build + `404.html` for GitHub Pages |
+| `npm run preview` | Preview build at `/manager_presentation/` |
+| `npm run deploy` | Build and publish to `gh-pages` branch |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | TypeScript check |
 
 ## Project Structure
 
@@ -72,21 +73,21 @@ src/
 public/           # favicon, OG preview image
 ```
 
-## Deploy on Vercel
+## Deploy on GitHub Pages
 
-1. Push this repository to GitHub (private or public).
-2. Go to [vercel.com](https://vercel.com) → **Add New Project**.
-3. Import the GitHub repository.
-4. Framework preset: **Vite** (auto-detected).
-5. Build command: `npm run build`
-6. Output directory: `dist`
-7. Deploy.
+**Live URL:** [https://samandar90.github.io/manager_presentation/](https://samandar90.github.io/manager_presentation/)
 
-`vercel.json` is included for consistent build settings.
+1. Install dependencies: `npm install`
+2. Deploy: `npm run deploy`
+3. In GitHub → **Settings → Pages** → Source: branch **`gh-pages`**, folder **`/ (root)`**
 
-### Environment Variables
+The project uses `base: '/manager_presentation/'` in `vite.config.ts`. Navigation uses in-page anchors (`#overview`, `#it`, …), not React Router — no extra routing setup required.
 
-No environment variables required for the static presentation site.
+### Local preview (production paths)
+
+```bash
+npm run preview
+```
 
 ## License
 
